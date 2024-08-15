@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Report Submission</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@daisypayments/timeline/dist/timeline.min.css">
+    <style>
+        .daisy-text p {
+            margin: 0;
+        }
+        .daisy-timeline__content {
+            margin-bottom: 15px;
+        }
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .card__content {
+            margin-top: 10px;
+        }
+        .card__title {
+            font-weight: bold;
+        }
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="daisy-timeline daisy-timeline--medium">
+            <!-- Intro Section -->
+            <div class="daisy-timeline__entry">
+                <div class="daisy-timeline__line daisy-timeline__line--medium"></div>
+                <div class="daisy-timeline__content">
+                    <div class="card">
+                        <div class="card__content daisy-text">
+                            <div class="interactive-markdown markdownable">
+                                <p>You're about to submit a security report. Please provide as much detail as possible to help us understand the issue.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Asset Section -->
+            <div class="daisy-timeline__entry">
+                <div class="daisy-timeline__line daisy-timeline__line--medium"></div>
+                <div class="daisy-timeline__content">
+                    <div class="card">
+                        <div class="card__title">Asset</div>
+                        <div class="card__content daisy-text">
+                            <div class="interactive-markdown markdownable">
+                                <label for="asset">Affected Asset:</label>
+                                <input type="text" id="asset" name="asset" class="form-input" placeholder="Enter the asset name or URL">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vulnerability Section -->
+            <div class="daisy-timeline__entry">
+                <div class="daisy-timeline__line daisy-timeline__line--medium"></div>
+                <div class="daisy-timeline__content">
+                    <div class="card">
+                        <div class="card__title">Vulnerability Details</div>
+                        <div class="card__content daisy-text">
+                            <div class="interactive-markdown markdownable">
+                                <label for="vulnerability">Description:</label>
+                                <textarea id="vulnerability" name="vulnerability" class="form-input" rows="4" placeholder="Describe the vulnerability in detail"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proof of Concept Section -->
+            <div class="daisy-timeline__entry">
+                <div class="daisy-timeline__line daisy-timeline__line--medium"></div>
+                <div class="daisy-timeline__content">
+                    <div class="card">
+                        <div class="card__title">Proof of Concept</div>
+                        <div class="card__content daisy-text">
+                            <div class="interactive-markdown markdownable">
+                                <label for="poc">Proof of Concept:</label>
+                                <textarea id="poc" name="poc" class="form-input" rows="4" placeholder="Provide any proof of concept code or steps"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Section -->
+            <div class="daisy-timeline__entry">
+                <div class="daisy-timeline__line daisy-timeline__line--medium"></div>
+                <div class="daisy-timeline__content">
+                    <div class="card">
+                        <div class="card__title">Impact</div>
+                        <div class="card__content daisy-text">
+                            <div class="interactive-markdown markdownable">
+                                <label for="impact">Impact:</label>
+                                <textarea id="impact" name="impact" class="form-input" rows="4" placeholder="Describe the potential impact of this vulnerability"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="daisy-timeline__entry">
+                <div class="daisy-timeline__line daisy-timeline__line--medium"></div>
+                <div class="daisy-timeline__content">
+                    <div class="card">
+                        <div class="card__content daisy-text">
+                            <button type="submit" class="form-button">Submit Report</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
